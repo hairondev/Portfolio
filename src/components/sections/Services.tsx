@@ -34,40 +34,40 @@ const Services = () => {
     { t: 'DO' },
   ];
   const descriptionText =
-    "I specialize in building full-stack web applications that are fast, reliable, and user-friendly. With a solid foundation in both frontend and backend technologies, I help bring ideas to life whether it's for a business, a startup, or a product team.";
+    'I develop mobile and web features, connect frontends to backend services, and improve day-to-day workflows through thoughtful integrations and automation.';
 
   const services = [
     {
       id: '01',
-      title: 'Full Stack Development',
+      title: 'Mobile & Web Development',
       description:
-        'End-to-end development of modern web applications, covering everything from frontend interfaces to backend APIs. I build complete, maintainable, and scalable systems using the MERN stack and modern tooling.',
+        'I build product features across Flutter mobile apps and web applications with React and Laravel, adapting each interface to how people use the product.',
       items: [
-        'MERN Stack (MongoDB, Express.js, React, Node.js)',
-        'REST APIs & Integration',
-        'Authentication & Authorization',
+        'Flutter mobile applications',
+        'React & Laravel web applications',
+        'Iterative delivery with user feedback',
       ],
     },
     {
       id: '02',
-      title: 'Frontend Development',
+      title: 'APIs & Backend Systems',
       description:
-        'Crafting responsive, accessible, and elegant interfaces that deliver exceptional user experiences. I focus on clarity, performance, and seamless interaction across devices.',
+        'I design modular APIs and connect frontend applications to backend services, helping replace manual processes with clear digital workflows.',
       items: [
-        'React, Next.js, TailwindCSS, GSAP',
-        'Optimized Rendering & Animations',
-        'Figma to Code Implementation',
+        'Python & FastAPI',
+        'Laravel, Node.js & Leaf PHP',
+        'MySQL, Docker & Git',
       ],
     },
     {
       id: '03',
-      title: 'Optimization & Performance',
+      title: 'Payments & Workflow Automation',
       description:
-        'Optimizing codebases, APIs, and assets for speed, scalability, and maintainability. I ensure your applications run efficiently with best practices in caching, SEO, and deployment.',
+        'I integrate payment flows between mobile and backend applications and automate recurring internal tasks to reduce repetitive work.',
       items: [
-        'Performance Tuning & Code Refactoring',
-        'SEO & Accessibility Optimization',
-        'Deployment (Vercel, AWS, Docker)',
+        'Mercado Pago integration',
+        'HTTPS tunnel testing for local development',
+        'Scheduled cron jobs',
       ],
     },
   ];

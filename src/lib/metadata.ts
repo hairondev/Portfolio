@@ -2,29 +2,32 @@ import { Metadata } from 'next';
 
 export const siteMetadata: Metadata = {
   title: {
-    default: 'Aitezaz Sikandar - Full Stack Developer',
-    template: '%s | Aitezaz Sikandar',
+    default: 'Eduardo Rojas - Full-Stack Developer',
+    template: '%s | Eduardo Rojas',
   },
   description:
-    'Web developer specializing in React, Next.js, and MERN Stack development. Building fast, scalable, and user-focused web applications.',
+    'Full-stack developer building mobile and web products with Flutter, React, Laravel, Python, and FastAPI.',
   keywords: [
-    'Aitezaz Sikandar',
+    'Eduardo Rojas',
     'Web Developer',
     'Frontend Developer',
     'Full Stack Developer',
-    'Next.js',
+    'Flutter',
+    'Laravel',
+    'Python',
+    'FastAPI',
     'React',
     'JavaScript',
-    'MERN Stack',
+    'Full-Stack Development',
     'Portfolio',
   ],
   authors: [
     {
-      name: 'Aitezaz Sikandar Khan',
+      name: 'Eduardo Rojas',
     },
   ],
-  creator: 'Aitezaz Sikandar',
-  metadataBase: new URL('https://aitezazdev.vercel.app'),
+  creator: 'Eduardo Rojas',
+  metadataBase: new URL('https://hairon.vercel.app'),
   alternates: {
     canonical: './',
   },
@@ -32,26 +35,26 @@ export const siteMetadata: Metadata = {
     icon: '/logo.webp',
   },
   openGraph: {
-    title: 'Aitezaz Sikandar - Full Stack Developer',
+    title: 'Eduardo Rojas - Full-Stack Developer',
     description:
-      'Portfolio of Aitezaz Sikandar, Full Stack Developer specializing in MERN stack, Next.js, and polished web experiences.',
-    url: 'https://aitezazdev.vercel.app',
-    siteName: 'Aitezaz Sikandar Portfolio',
+      'Portfolio of Eduardo Rojas, full-stack developer building products across mobile, web, and backend systems with Flutter, Laravel, Python, and React.',
+    url: 'https://hairon.vercel.app',
+    siteName: 'Eduardo Rojas Portfolio',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Aitezaz Sikandar - Full Stack Developer',
+        alt: 'Eduardo Rojas - Full-Stack Developer',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aitezaz Sikandar - Full Stack Developer',
+    title: 'Eduardo Rojas - Full-Stack Developer',
     description:
-      'Portfolio of Aitezaz Sikandar, Full Stack Developer specializing in MERN stack, Next.js, and polished web experiences.',
+      'Portfolio of Eduardo Rojas, full-stack developer building products across mobile, web, and backend systems with Flutter, Laravel, Python, and React.',
     images: ['/og-image.png'],
   },
   robots: {

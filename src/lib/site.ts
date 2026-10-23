@@ -1,37 +1,36 @@
 export const site = {
-  name: 'Aitezaz Sikandar',
-  firstName: 'Aitezaz',
-  lastName: 'Sikandar',
-  handle: 'aitezazdev',
-  brand: 'aitezaz.dev',
-  email: 'aitezazsikandar@gmail.com',
-  location: 'Pakistan',
-  timeZone: 'Asia/Karachi',
-  timeZoneLabel: 'PKT',
-  url: 'https://aitezazdev.vercel.app',
-  tagline: 'Full Stack Developer crafting fast, expressive web experiences.',
+  name: 'Eduardo Rojas',
+  firstName: 'Eduardo',
+  lastName: 'Rojas',
+  handle: 'hairondev',
+  brand: 'hairon.dev',
+  email: 'rojas.edu53@gmail.com',
+  location: 'Mexico',
+  timeZone: 'America/Mexico_City',
+  timeZoneLabel: 'CT',
+  url: 'https://hairon.vercel.app',
+  tagline: 'Full-stack developer building useful products across mobile, web, and backend systems.',
   roles: [
+    'Softawre Engineer',
     'Full Stack Developer',
-    'React & Next.js Engineer',
-    'MERN Stack Developer',
-    'Open to Work Worldwide',
+    'Flutter & Mobile Developer',
+    'Python & FastAPI Developer',
+    'React & Laravel Engineer',
   ],
 } as const;
 
-export type SocialKey = 'github' | 'linkedin' | 'instagram' | 'source';
+export type SocialKey = 'github' | 'linkedin' | 'instagram';
 
 export const socials: Record<SocialKey, { label: string; href: string }> = {
-  github: { label: 'GitHub', href: 'https://github.com/aitezazdev' },
-  linkedin: { label: 'Linkedin', href: 'https://linkedin.com/in/aitezaz-sikandar' },
-  instagram: { label: 'Instagram', href: 'https://instagram.com/ur_zaz' },
-  source: { label: 'Source Code', href: 'https://github.com/aitezazdev/Portfolio' },
+  github: { label: 'GitHub', href: 'https://github.com/hairondev' },
+  linkedin: { label: 'LinkedIn', href: 'https://linkedin.com/in/eduardorojas-r' },
+  instagram: { label: 'Instagram', href: 'https://instagram.com/eduardo_rojas40' },
 };
 
 export const socialList: Array<{ label: string; href: string }> = [
   socials.linkedin,
   socials.instagram,
   socials.github,
-  socials.source,
 ];
 
 export const navLinks = [

@@ -8,8 +8,8 @@ import ScrollWordReveal from '@/components/ui/ScrollWordReveal';
 
 export interface TechItem {
   name: string;
-  category: 'frontend' | 'backend' | 'database' | 'devops' | 'tools';
-  icon: string;
+  category: 'languages' | 'frontend' | 'backend' | 'database' | 'devops' | 'tools';
+  icon?: string;
   level?: string;
   description?: string;
 }
@@ -24,36 +24,55 @@ export interface StackCategory {
 
 export const STACK_SECTIONS: StackCategory[] = [
   {
+    id: 'languages',
+    title: 'LANGUAGES',
+    technologies: [
+      { name: 'C++', category: 'languages', icon: '/Services/cplusplus.svg' },
+      { name: 'Python', category: 'languages', icon: '/Services/python-icon.svg' },
+      { name: 'JavaScript', category: 'languages', icon: '/Services/js.png' },
+      { name: 'TypeScript', category: 'languages', icon: '/Services/typescript.svg' },
+      //{ name: 'C#', category: 'languages' },
+      { name: 'Dart', category: 'languages', icon: '/Services/dartlang-icon.svg' },
+    ],
+  },
+  {
     id: 'frontend',
     title: 'FRONTEND',
     technologies: [
-      { name: 'JavaScript', category: 'frontend', icon: '/Services/js.png' },
-      { name: 'TypeScript', category: 'frontend', icon: '/Services/typescript.svg' },
       { name: 'React', category: 'frontend', icon: '/Services/react.png' },
       { name: 'Next.js', category: 'frontend', icon: '/Services/next.webp' },
-      { name: 'Redux Toolkit', category: 'frontend', icon: '/Services/reduxtoolkit.svg' },
+      { name: 'Flutter', category: 'frontend', icon: '/Services/flutterio-icon.svg' },
       { name: 'Tailwind CSS', category: 'frontend', icon: '/Services/tailwind.png' },
-      { name: 'Bootstrap', category: 'frontend', icon: '/Services/bootstrap.svg' },
-      { name: 'GSAP', category: 'frontend', icon: '/Services/gsap.png' },
+      //{ name: 'Angular', category: 'frontend' },
+      //{ name: 'Framer Motion', category: 'frontend' },
+      //{ name: 'Progressive Web Apps', category: 'frontend' },
+      // { name: 'Redux Toolkit', category: 'frontend', icon: '/Services/reduxtoolkit.svg' },
+      // { name: 'Bootstrap', category: 'frontend', icon: '/Services/bootstrap.svg' },
+      // { name: 'GSAP', category: 'frontend', icon: '/Services/gsap.png' },
     ],
   },
   {
     id: 'backend',
     title: 'BACKEND & REAL-TIME',
     technologies: [
+      { name: 'FastAPI', category: 'backend', icon: '/Services/fastapi.svg' },
       { name: 'Node.js', category: 'backend', icon: '/Services/node.png' },
       { name: 'Express.js', category: 'backend', icon: '/Services/express.png' },
       { name: 'Socket.io', category: 'backend', icon: '/Services/socketio.svg' },
-      { name: 'Firebase', category: 'backend', icon: '/Services/firebase.svg' },
+      { name: 'Laravel', category: 'backend', icon: '/Services/laravel.svg' },
+      // { name: 'Firebase', category: 'backend', icon: '/Services/firebase.svg' },
     ],
   },
   {
     id: 'database',
     title: 'DATABASE & ORM',
     technologies: [
-      { name: 'MongoDB', category: 'database', icon: '/Services/mongodb.svg' },
-      { name: 'Mongoose', category: 'database', icon: '/Services/mongoose.svg' },
+      { name: 'MongoDB Atlas', category: 'database', icon: '/Services/mongodb.svg' },
       { name: 'MySQL', category: 'database', icon: '/Services/mysql.svg' },
+      { name: 'PostgreSQL', category: 'database', icon: '/Services/postgresql-icon.svg' },
+      { name: 'Redis', category: 'database', icon: '/Services/redis-icon.svg' },
+      { name: 'SQLite', category: 'database', icon: '/Services/sqlite-icon.svg' },
+      // { name: 'Mongoose', category: 'database', icon: '/Services/mongoose.svg' },
     ],
   },
   {
@@ -61,22 +80,30 @@ export const STACK_SECTIONS: StackCategory[] = [
     title: 'DEVOPS & CLOUD',
     technologies: [
       { name: 'Docker', category: 'devops', icon: '/Services/docker.svg' },
-      { name: 'GitHub Actions', category: 'devops', icon: '/Services/githubactions.svg' },
-      { name: 'AWS', category: 'devops', icon: '/Services/aws.webp' },
-      { name: 'Nginx', category: 'devops', icon: '/Services/nginx.svg' },
+      { name: 'Microsoft Azure', category: 'devops', icon: '/Services/azure-badge.svg' },
+      // { name: 'CI/CD', category: 'devops' },
       { name: 'Linux', category: 'devops', icon: '/Services/linux.svg' },
+      // { name: 'GitHub Actions', category: 'devops', icon: '/Services/githubactions.svg' },
+      // { name: 'AWS', category: 'devops', icon: '/Services/aws.webp' },
+      // { name: 'Nginx', category: 'devops', icon: '/Services/nginx.svg' },
     ],
   },
   {
     id: 'tools',
     title: 'AI, TESTING & TOOLS',
     technologies: [
-      { name: 'Gemini AI', category: 'tools', icon: '/Services/geminiai.svg' },
-      { name: 'Jest', category: 'tools', icon: '/Services/jest.svg' },
-      { name: 'Zod', category: 'tools', icon: '/Services/zod.svg' },
-      { name: 'Stripe', category: 'tools', icon: '/Services/stripe.svg' },
-      { name: 'Cloudinary', category: 'tools', icon: '/Services/cloudinary.svg' },
+      { name: 'Gemma', category: 'tools', icon: '/Services/google-gemma-ai-icon.svg' },
+      { name: 'Mercado Pago', category: 'tools', icon: '/Services/mercado-pago.svg' },
+      // { name: 'Spiget API', category: 'tools' },
+      // { name: 'Hangar API', category: 'tools' },
+      //  name: 'Modrinth API', category: 'tools' },
       { name: 'Git', category: 'tools', icon: '/Services/git.png' },
+      { name: 'GitHub', category: 'tools', icon: '/Services/github-dark.svg' },
+      { name: 'Gemini AI', category: 'tools', icon: '/Services/geminiai.svg' },
+      // { name: 'Jest', category: 'tools', icon: '/Services/jest.svg' },
+      // { name: 'Zod', category: 'tools', icon: '/Services/zod.svg' },
+      // { name: 'Stripe', category: 'tools', icon: '/Services/stripe.svg' },
+      // { name: 'Cloudinary', category: 'tools', icon: '/Services/cloudinary.svg' },
       { name: 'Postman', category: 'tools', icon: '/Services/postman-icon.svg' },
       { name: 'Figma', category: 'tools', icon: '/Services/figma.png' },
     ],
@@ -95,15 +122,16 @@ const TechStack = () => {
     { t: 'stack', serif: true },
   ];
   const descriptionText =
-    'A selection of technologies I use to design, build, and deploy full-stack web applications.';
+    'A selection of technologies I use across mobile apps, web platforms, APIs, data stores, and AI-powered projects.';
 
   const filterOptions = [
     { id: 'all', label: 'All Categories' },
+    { id: 'languages', label: 'Languages' },
     { id: 'frontend', label: 'Frontend' },
     { id: 'backend', label: 'Backend & Real-Time' },
     { id: 'database', label: 'Database & ORM' },
     { id: 'devops', label: 'DevOps & Cloud' },
-    { id: 'tools', label: 'AI, Testing & Tools' },
+    { id: 'tools', label: 'AI & Integrations' },
   ];
 
   const visibleSections =
@@ -259,19 +287,30 @@ const TechStack = () => {
               <div className="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {stack.technologies.map((tech, i) => (
                   <div
-                    key={i}
+                    key={tech.name}
                     className="tech-item flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 hover:bg-elevated-dark/60 border border-white/[0.04] hover:border-accent/30 bg-surface/50"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="w-10 h-10 flex items-center justify-center relative flex-shrink-0">
-                      <Image
-                        src={tech.icon}
-                        alt={tech.name}
-                        width={40}
-                        height={40}
-                        className="w-full h-full object-contain"
-                      />
+                      {tech.icon ? (
+                        <Image
+                          src={tech.icon}
+                          alt={tech.name}
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <span aria-hidden="true" className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-elevated-dark font-mono text-[10px] font-bold text-accent-light">
+                          {tech.name
+                            .split(/\s+/)
+                            .slice(0, 2)
+                            .map((part) => part.charAt(0))
+                            .join('')
+                            .toUpperCase()}
+                        </span>
+                      )}
                     </div>
                     <p className="text-xs sm:text-sm font-mono font-bold text-cream break-words">
                       {tech.name}

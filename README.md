@@ -1,8 +1,8 @@
 # Portfolio
 
-The personal portfolio of [**Aitezaz Sikandar**](https://github.com/aitezazdev). Built with **Next.js 15**, **React 19**, **GSAP 3**, and **Lenis**, featuring hardware-accelerated motion choreography, interactive HTML5 canvas simulations, seamless page transitions, and an emerald-accented dark editorial design.
+The personal portfolio of [**Eduardo Rojas**](https://github.com/hairon02). Built with **Next.js 16**, **React 19**, **GSAP 3**, and **Lenis**, featuring hardware-accelerated motion choreography, interactive HTML5 canvas simulations, seamless page transitions, and an emerald-accented dark editorial design.
 
-**Live Site:** [aitezazdev.vercel.app](https://aitezazdev.vercel.app)
+**Live Site:** [hairon.vercel.app](https://hairon.vercel.app)
 
 ---
 
@@ -20,7 +20,7 @@ The personal portfolio of [**Aitezaz Sikandar**](https://github.com/aitezazdev).
 
 ## Tech Stack
 
-- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
 - **Core Library:** [React 19](https://react.dev/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Animation:** [GSAP 3](https://gsap.com/) & [@gsap/react](https://gsap.com/resources/React)
@@ -42,7 +42,7 @@ All environment variables are **completely optional** for local development. Any
 | `NEXT_PUBLIC_GA_ID` | Optional | `undefined` | Google Analytics Measurement ID (`G-XXXXXXXXXX`). When omitted, Google Analytics is cleanly skipped with zero network requests and zero runtime errors. |
 | `RESEND_API_KEY` | Optional | `undefined` | Resend REST API key (`re_...`). Primary delivery provider for contact inquiries. |
 | `GMAIL_APP_PASSWORD` | Optional | `undefined` | Gmail SMTP 16-character App Password. Used as fallback email delivery via Nodemailer. |
-| `CONTACT_EMAIL` | Optional | `site.email` | Destination email address for contact form submissions. Defaults to `aitezazsikandar@gmail.com`. |
+| `CONTACT_EMAIL` | Optional | `site.email` | Destination email address for contact form submissions. Defaults to `rojas.edu53@gmail.com`. |
 
 > **Note for forks & clones:** In development (`NODE_ENV === 'development'`), if neither `RESEND_API_KEY` nor `GMAIL_APP_PASSWORD` is configured, form submissions are logged locally to `messages.txt` in the project root so the UI can be tested end-to-end without real email credentials.
 
@@ -52,20 +52,20 @@ All environment variables are **completely optional** for local development. Any
 
 ### Prerequisites
 
-- Node.js 18.17+ or 20+
-- npm, pnpm, or yarn
+- Node.js (compatible with Next.js 16)
+- pnpm
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aitezazdev/Portfolio.git
+   git clone https://github.com/hairon02/Portfolio.git
    cd Portfolio
    ```
 
 2. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. *(Optional)* Create a `.env.local` file by copying the template:
@@ -76,7 +76,7 @@ All environment variables are **completely optional** for local development. Any
 
 4. Start the local development server:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -87,12 +87,12 @@ All environment variables are **completely optional** for local development. Any
 
 | Command | Description |
 |---|---|
-| `npm run dev` | Start development server with Turbopack / Next.js |
-| `npm run build` | Create production build with static pre-rendering |
-| `npm run start` | Run production build locally |
-| `npm run lint` | Run ESLint across all source files |
-| `npm run lint:fix` | Automatically fix fixable ESLint errors |
-| `npm run format` | Format files using Prettier |
+| `pnpm dev` | Start development server with Turbopack / Next.js |
+| `pnpm build` | Create production build with static pre-rendering |
+| `pnpm start` | Run production build locally |
+| `pnpm lint` | Run ESLint across all source files |
+| `pnpm lint:fix` | Automatically fix fixable ESLint errors |
+| `pnpm format` | Format files using Prettier |
 
 ---
 

@@ -9,30 +9,24 @@ import FlowField from '@/components/canvas/FlowField';
 const CREDENTIALS = [
   {
     year: '2026',
-    title: 'Software Engineer Intern - MERN Stack',
-    organization: 'e-strats, Islamabad',
-    type: 'Industry',
+    title: 'Mobile & Web Engineer',
+    organization: 'Pandalatec',
+    stat: 'Developed Flutter mobile features and integrated Mercado Pago with a Laravel backend.',
+    type: 'Experience',
   },
   {
-    year: '2026',
-    title: 'HEC National Skills Competency Test (NSCT)',
-    organization: 'HEC, PSEB & P@SHA',
-    stat: '95th Percentile, Top 5% nationwide',
-    type: 'Recognition',
+    year: '2024 – 26',
+    title: 'Full-Stack Developer',
+    organization: 'UsaLab',
+    stat: 'Led a teacher-registration platform adopted by Universidad Tecnológica de la Mixteca; over 100 educators enrolled in its first edition.',
+    type: 'Experience',
   },
   {
-    year: '2024-25',
-    title: 'Web and Mobile App Development',
-    organization: 'Saylani Mass IT Training (SMIT), Peshawar',
-    stat: 'Full-Stack MERN, TypeScript, Next.js & Hybrid Apps',
-    type: 'Certification',
-  },
-  {
-    year: '2022-26',
-    title: 'BS Computer Science',
-    organization: 'University of Peshawar',
-    stat: '3.60 / 4.00 GPA',
-    type: 'Education',
+    year: '2024',
+    title: 'Full-Stack Developer',
+    organization: 'Selfish',
+    stat: 'Maintained an administrative platform and automated recurring tasks with scheduled cron jobs.',
+    type: 'Experience',
   },
 ];
 
@@ -43,8 +37,8 @@ const About = () => {
     { t: 'i?' },
   ];
   const descriptionText =
-    'I am a software engineer driven by a passion for building clean, intuitive, and reliable digital experiences.';
-  const aboutMeText = `I build web applications that bridge thoughtful frontend interfaces with robust backend systems. To me, software is more than code on a screen; it is about making technology feel effortless and genuinely useful to real people.\n\nMy journey began with a simple curiosity for how things work under the hood. Over time, that curiosity evolved into a genuine passion for fluid interface animations, reliable backend architecture, and building user journeys that feel effortless and alive.\n\nWhether I am polishing micro-interactions or engineering full-stack systems, my core focus remains unchanged: creating software that brings people joy, solves real problems, and leaves a lasting positive impact.`;
+    'I build full-stack products across mobile and web, connecting thoughtful user experiences with reliable APIs and backend services.';
+  const aboutMeText = `I am a full-stack developer who enjoys taking products from user needs to working features across mobile, web, and backend systems. My experience includes Flutter, React, Laravel, Python, and FastAPI, along with databases and deployment tools such as MySQL and Docker.\n\nAt UsaLab, I led development of a teacher-registration platform that became an official system for Universidad Tecnológica de la Mixteca. More than 100 educators enrolled in its first edition. I built modular APIs for registration, course enrollment, and progress tracking, and helped replace a manual process with a React and Laravel frontend connected to a Python backend.\n\nMost recently at Pandalatec, I developed Flutter features for TrueFans and integrated Mercado Pago payments with its Laravel backend. Earlier at Selfish, I maintained a React and Node.js administrative platform and automated recurring tasks with scheduled jobs. Across these roles, I value iterative delivery, usability feedback, and practical solutions that make everyday workflows easier.`;
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const tableRef = useRef<HTMLDivElement>(null);
@@ -283,7 +277,7 @@ const About = () => {
                 {CREDENTIALS.map((item, idx) => {
                   const isLeft = idx % 2 === 0;
                   return (
-                    <article key={item.title} data-side={isLeft ? 'left' : 'right'} className="cred-row relative grid grid-cols-[32px_1fr] gap-x-5 opacity-0 md:grid-cols-[1fr_96px_1fr] md:gap-x-0">
+                    <article key={`${item.organization}-${item.title}`} data-side={isLeft ? 'left' : 'right'} className="cred-row relative grid grid-cols-[32px_1fr] gap-x-5 opacity-0 md:grid-cols-[1fr_96px_1fr] md:gap-x-0">
                       <div className="relative order-1 md:col-start-2 md:row-start-1 md:justify-self-center">
                         <span className="timeline-dot relative z-10 block h-[15px] w-[15px] rounded-full border-[3px] border-ink bg-cream" />
                         <span aria-hidden="true" className={`timeline-connector absolute top-[7px] hidden h-px w-14 bg-white/25 md:block ${isLeft ? 'right-full origin-right' : 'left-full origin-left'}`} />
