@@ -82,7 +82,7 @@ const StampBadge = ({ onClick }: { onClick: () => void }) => (
           </textPath>
         </text>
       </svg>
-      <span className="grid place-items-center w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-accent text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-45">
+      <span className="grid place-items-center w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-accent text-ink transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-45">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M7 7l10 10M17 7v10H7" />
         </svg>
@@ -262,7 +262,7 @@ const HomeBanner = () => {
           ref={spotlightRef}
           className="absolute inset-0 pointer-events-none z-[1] opacity-0"
           style={{
-            background: 'radial-gradient(400px circle at var(--x, 0px) var(--y, 0px), rgba(196, 93, 62, 0.07), transparent 85%)',
+            background: 'radial-gradient(400px circle at var(--x, 0px) var(--y, 0px), rgba(136, 166, 73, 0.07), transparent 85%)',
             willChange: 'opacity',
           }}
         />

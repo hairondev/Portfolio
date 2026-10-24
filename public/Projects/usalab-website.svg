@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102C3A"/><stop offset="1" stop-color="#101217"/></linearGradient><radialGradient id="r"><stop stop-color="#57B7AE" stop-opacity=".42"/><stop offset="1" stop-color="#57B7AE" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="750" fill="url(#g)"/><circle cx="925" cy="230" r="330" fill="url(#r)"/>
+  <path d="M0 620 Q360 500 690 650 T1200 550 V750 H0Z" fill="#57B7AE" opacity=".08"/>
+  <g fill="none" stroke="#57B7AE" stroke-opacity=".45" stroke-width="2"><circle cx="930" cy="250" r="150"/><circle cx="930" cy="250" r="205"/><path d="M760 250h340M930 80v340"/></g>
+  <rect x="80" y="78" width="62" height="8" rx="4" fill="#57B7AE"/>
+  <text x="80" y="440" fill="#F6F4EF" font-family="Inter,Arial,sans-serif" font-size="62" font-weight="700">UsaLab</text>
+  <text x="84" y="495" fill="#C5CBD0" font-family="Inter,Arial,sans-serif" font-size="25">Usability · HCI · Universidad Tecnológica de la Mixteca</text>
+  <text x="84" y="680" fill="#57B7AE" font-family="monospace" font-size="18" letter-spacing="4">EDUARDO ROJAS · SELECTED PROJECT</text>
+</svg>

@@ -252,7 +252,7 @@ const TechStack = () => {
                 className={`text-xs sm:text-sm font-mono tracking-wider px-3.5 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${
                   isActive
                     ? 'bg-cream text-ink border-cream font-semibold shadow-md'
-                    : 'bg-elevated-dark/60 text-gray-soft border-white/10 hover:border-accent/40 hover:text-cream'
+                    : 'bg-elevated-dark/60 text-gray-soft border-white/10 hover:border-accent-secondary/50 hover:text-cream'
                 }`}
               >
                 {option.label}
@@ -288,7 +288,7 @@ const TechStack = () => {
                 {stack.technologies.map((tech, i) => (
                   <div
                     key={tech.name}
-                    className="tech-item flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 hover:bg-elevated-dark/60 border border-white/[0.04] hover:border-accent/30 bg-surface/50"
+                    className="tech-item flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 hover:bg-elevated-dark/60 border border-white/[0.04] hover:border-accent-secondary/40 bg-surface/50"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >

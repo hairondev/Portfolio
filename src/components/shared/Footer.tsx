@@ -113,7 +113,7 @@ const Footer = () => {
           <Magnetic strength={0.4}>
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-elevated-dark border border-border-subtler flex items-center justify-center text-gray-soft hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300 group focus:outline-none"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-elevated-dark border border-border-subtler flex items-center justify-center text-gray-soft hover:text-accent-secondary hover:border-accent-secondary hover:bg-accent-secondary/10 transition-all duration-300 group focus:outline-none"
               aria-label="Scroll to top"
             >
               <FaArrowUp className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:-translate-y-1 transition-transform duration-300" />

@@ -95,12 +95,12 @@ export default function CustomCursor() {
         setCursorText(type.toUpperCase());
         gsap.to(cursorOutline, {
           scale: type === 'drag' ? 4 : type === 'copy' ? 3 : 2,
-          backgroundColor: 'rgba(97,92,86,0.1)',
+          backgroundColor: 'rgba(136,166,73,0.1)',
           duration: 0.4,
         });
         gsap.to(cursorTextEl, { opacity: 1, duration: 0.2 });
       } else {
-        gsap.to(cursorOutline, { scale: 2, backgroundColor: 'rgba(97,92,86,0.15)', duration: 0.4 });
+        gsap.to(cursorOutline, { scale: 2, backgroundColor: 'rgba(136,166,73,0.15)', duration: 0.4 });
       }
 
       gsap.to(cursorDot, { scale: 0, duration: 0.3 });

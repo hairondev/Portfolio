@@ -315,7 +315,7 @@ function MobileSnapProjects({ projects, router }: MobileSnapProjectsProps) {
             }}
             ref={(el) => { cardRefs.current[index] = el; }}
             className="overflow-hidden rounded-3xl block no-underline text-inherit"
-            style={{ background: '#111110', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' }}
+            style={{ background: '#2C2E2A', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' }}
           >
             <div className="p-3 pb-0">
               <div
@@ -343,7 +343,7 @@ function MobileSnapProjects({ projects, router }: MobileSnapProjectsProps) {
                   className="mc-num font-mono font-black leading-none"
                   style={{
                     fontSize: 'clamp(2rem, 9vw, 2.6rem)',
-                    color: '#34D399',
+                    color: '#88A649',
                     letterSpacing: '-0.03em',
                   }}
                 >
@@ -369,7 +369,7 @@ function MobileSnapProjects({ projects, router }: MobileSnapProjectsProps) {
               </div>
 
               <h3
-                className="mc-title font-black uppercase leading-tight text-white mb-4"
+                className="mc-title font-black uppercase leading-tight text-cream mb-4"
                 style={{ fontSize: 'clamp(1.3rem, 5.5vw, 2rem)', letterSpacing: '-0.025em' }}
               >
                 {project.title}
@@ -385,8 +385,8 @@ function MobileSnapProjects({ projects, router }: MobileSnapProjectsProps) {
                     View Project
                   </span>
                   <span
-                    className="flex items-center justify-center w-9 h-9 rounded-full text-[#0A0F0D] text-sm"
-                    style={{ background: '#34D399', boxShadow: '0 0 16px rgba(52, 211, 153, 0.35)' }}
+                    className="flex items-center justify-center w-9 h-9 rounded-full text-[#2C2E2A] text-sm"
+                    style={{ background: '#88A649', boxShadow: '0 0 16px rgba(136, 166, 73, 0.35)' }}
                   >
                     →
                   </span>
@@ -572,7 +572,7 @@ export default function ProjectsPage() {
     const row = e.currentTarget;
     const line = row.querySelector('.hover-line-ref');
     if (line) gsap.to(line, { width: '100%', duration: 0.15, ease: 'power2.out' });
-    gsap.to(row, { backgroundColor: 'rgba(196, 93, 62, 0.04)', duration: 0.15, ease: 'power2.out' });
+    gsap.to(row, { backgroundColor: 'rgba(136, 166, 73, 0.04)', duration: 0.15, ease: 'power2.out' });
     const scrollY = (window as any).__lenis
       ? Math.round((window as any).__lenis.scroll)
       : Math.round(window.scrollY);

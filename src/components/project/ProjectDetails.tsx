@@ -383,7 +383,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
             />
             <a
               href={`mailto:${site.email}`}
-              className="text-lg sm:text-xl font-semibold text-[#bab6b3] hover:text-[#d4d2d0] transition"
+              className="text-lg sm:text-xl font-semibold text-[#CDCFCC] hover:text-[#CDCFCC] transition"
             >
               {site.email}
             </a>

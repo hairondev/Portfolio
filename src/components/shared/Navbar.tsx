@@ -83,7 +83,7 @@ const MagneticHamburgerButton: React.FC<MagneticHamburgerButtonProps> = ({ isOpe
         onClick={onClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleButtonMouseLeave}
-        className="relative w-12 h-12 md:w-15 md:h-15 rounded-full overflow-hidden bg-[#111A16] border border-white/15 outline-none flex items-center justify-center cursor-pointer shadow-xl group"
+        className="relative w-12 h-12 md:w-15 md:h-15 rounded-full overflow-hidden bg-[#2C2E2A] border border-white/15 outline-none flex items-center justify-center cursor-pointer shadow-xl group"
         style={{ transformOrigin: 'center' }}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
@@ -97,13 +97,13 @@ const MagneticHamburgerButton: React.FC<MagneticHamburgerButtonProps> = ({ isOpe
 
         <div className="relative z-10 w-5 h-3 flex items-center justify-center pointer-events-none">
           <span
-            className={`absolute w-full h-[2px] rounded-full bg-[#E2E8E4] transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+            className={`absolute w-full h-[2px] rounded-full bg-[#CDCFCC] transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
               isOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0 rotate-0'
             }`}
             style={{ transformOrigin: 'center' }}
           />
           <span
-            className={`absolute w-full h-[2px] rounded-full bg-[#E2E8E4] transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+            className={`absolute w-full h-[2px] rounded-full bg-[#CDCFCC] transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
               isOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : 'bottom-0 rotate-0'
             }`}
             style={{ transformOrigin: 'center' }}
@@ -391,7 +391,7 @@ const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose, handle
           <path
             ref={curvePathRef}
             d="M100 0 L200 0 L200 100 L100 100 Q100 50 100 0"
-            fill="#0B110E"
+            fill="#2C2E2A"
           />
         </svg>
 
@@ -426,13 +426,13 @@ const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose, handle
                     onClick={() => handleLinkClick(link.href)}
                     className="group flex items-center gap-4 md:gap-6 text-left animate-link-row"
                   >
-                    <span className="text-gray-mid font-mono text-xs md:text-sm transition-colors duration-300 group-hover:text-accent">
+                    <span className="text-gray-mid font-mono text-xs md:text-sm transition-colors duration-300 group-hover:text-accent-secondary">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="font-display text-[2.8rem] sm:text-[3.4rem] md:text-[3.8rem] lg:text-[4.4rem] xl:text-[4.8rem] font-black uppercase leading-none tracking-tight text-cream group-hover:text-accent transition-colors duration-300 flex overflow-hidden">
+                    <span className="font-display text-[2.8rem] sm:text-[3.4rem] md:text-[3.8rem] lg:text-[4.4rem] xl:text-[4.8rem] font-black uppercase leading-none tracking-tight text-cream group-hover:text-accent-secondary transition-colors duration-300 flex overflow-hidden">
                       {link.name}
                     </span>
-                    <span className="text-accent text-2xl md:text-3xl lg:text-4xl opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
+                    <span className="text-accent-secondary text-2xl md:text-3xl lg:text-4xl opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
                       →
                     </span>
                   </button>

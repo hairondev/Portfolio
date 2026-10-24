@@ -1,0 +1,96 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.48in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{titlesec}
+
+\hypersetup{
+  pdftitle={Eduardo Rojas Rodriguez - Resume},
+  pdfauthor={Eduardo Rojas Rodriguez}
+}
+
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}{\bfseries\fontsize{10.5}{11}\selectfont}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\newcommand{\job}[2]{\textbf{#1}\hfill\textit{#2}\par\vspace{-1pt}}
+\newcommand{\project}[2]{\textbf{#1}\hspace{3pt}\textit{\small #2}\par\vspace{-2pt}}
+
+\begin{document}
+\fontsize{9.6}{11.1}\selectfont
+
+\begin{center}
+  {\fontsize{20}{22}\selectfont\bfseries EDUARDO ROJAS RODRIGUEZ}\par
+  \vspace{1pt}
+  {\fontsize{10}{11}\selectfont Software Engineer $|$ Backend, Full-Stack \& Mobile}\par
+  \vspace{3pt}
+  Oaxaca, Mexico $|$ +52 953 102 12 33 $|$
+  \href{mailto:rojas.edu53@gmail.com}{rojas.edu53@gmail.com} $|$
+  \href{https://linkedin.com/in/eduardorojas-r}{linkedin.com/in/eduardorojas-r} $|$
+  \href{https://github.com/hairondev}{github.com/hairondev}
+\end{center}
+\vspace{-5pt}
+
+\section*{Professional Summary}
+Computer Engineering graduate with experience building web and mobile applications, REST APIs, and cloud/AI integrations. Led development of a teacher-registration platform adopted by Universidad Tecnológica de la Mixteca and used by 100+ educators in its first edition. Hands-on with Python, FastAPI, React, Node.js, Flutter, and Microsoft Azure.
+
+\section*{Education}
+\job{Computer Engineering $|$ Universidad Tecnológica de la Mixteca, Oaxaca, Mexico}{2021--2026}
+Professional internship/practice completed; degree conferral pending university issuance.
+
+\section*{Technical Skills}
+\textbf{Languages:} Python, JavaScript, TypeScript, SQL, C\#, Dart\par
+\textbf{Frameworks:} FastAPI, React, Next.js, Node.js, Express, Angular, Laravel, Flutter\par
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB Atlas, Redis, SQLite\par
+\textbf{Cloud \& Tools:} Microsoft Azure (Azure OpenAI, Azure AI Search), Docker, Git, GitHub, Linux, CI/CD\par
+\textbf{Methods:} REST APIs, event-driven communication, Agile/Scrum, test-driven development, object-oriented programming
+
+\section*{Professional Experience}
+\job{Software Engineer $|$ Pandalatec}{Aug 2026--Oct 2026}
+\begin{itemize}
+  \item Developed Flutter mobile features and Laravel web functionality for TrueFans, a gamified platform connecting fans with influencers, artists, and brands.
+  \item Integrated Mercado Pago between the Flutter app and Laravel backend; tested local development through an HTTPS tunnel.
+\end{itemize}
+
+\job{Full-Stack Developer $|$ UsaLab}{Aug 2024--Mar 2026}
+\begin{itemize}
+  \item Led a teacher-registration platform adopted as Universidad Tecnológica de la Mixteca's official system in 2025; over 100 educators enrolled in its first edition.
+  \item Built Python/FastAPI REST APIs for registration, enrollment, and progress; connected a React/Laravel frontend to replace manual enrollment and iterated from user feedback.
+\end{itemize}
+
+\job{Full-Stack Developer $|$ Selfish}{Jul 2024--Aug 2024}
+Maintained a React/Node.js administrative platform built with Leaf PHP and automated recurring internal tasks with scheduled cron jobs.
+
+\section*{Selected Projects}
+\project{AI Narrative Adventure Game $|$ Microsoft Agents League, AI Skills Fest 2026}{React, Node.js, Socket.IO, Azure OpenAI, Azure AI Search, MongoDB Atlas}
+\begin{itemize}
+  \item Built an adaptive narrative game that generates story scenes in real time based on player decisions.
+  \item Grounded Azure OpenAI generations with Azure AI Foundry IQ/Azure AI Search through LangChain-style orchestration; synchronized play with Socket.IO and stored sessions in MongoDB Atlas.
+\end{itemize}
+
+\project{Clearing $|$ Privacy-Focused Outdoor Exploration App}{Flutter, FastAPI, SQLite, Gemma}
+\begin{itemize}
+  \item Built a privacy-focused PWA that reveals map areas as users explore and take photos at different locations.
+  \item Verified photos with a locally run Gemma vision model; processed images and GPS coordinates through a local FastAPI backend.
+\end{itemize}
+
+\project{PlugCheck $|$ Minecraft Plugin Compatibility Checker}{Next.js, TypeScript, Hangar API, Spiget API, Modrinth API}
+\begin{itemize}
+  \item Built a web tool that checks plugin compatibility by querying Hangar, Spiget, and Modrinth.
+  \item Parsed JAR files entirely in the browser and sent only extracted metadata to the API, keeping plugin files on the user's device.
+\end{itemize}
+
+\section*{Languages}
+Spanish: Native $|$ English: Technical proficiency for reading documentation
+
+\end{document}

@@ -20,8 +20,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   useEffect(() => {
     console.log(
       '%c Creative Portfolio Blueprint %c by Aitezaz Sikandar (https://aitezazdev.vercel.app) ',
-      'background: #080807; color: #e8e8e3; padding: 4px 8px; border-radius: 4px 0 0 4px; font-family: monospace; font-weight: bold;',
-      'background: #e8e8e3; color: #080807; padding: 4px 8px; border-radius: 0 4px 4px 0; font-family: monospace; font-weight: bold; border: 1px solid #080807;'
+      'background: #2C2E2A; color: #CDCFCC; padding: 4px 8px; border-radius: 4px 0 0 4px; font-family: monospace; font-weight: bold;',
+      'background: #CDCFCC; color: #2C2E2A; padding: 4px 8px; border-radius: 0 4px 4px 0; font-family: monospace; font-weight: bold; border: 1px solid #2C2E2A;'
     );
 
     let seen = false;

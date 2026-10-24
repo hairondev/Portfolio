@@ -14,33 +14,34 @@
 
   --spacing-section: clamp(6rem, 12vw, 11rem);
 
-  --color-cream: #E2E8E4;
-  --color-ink: #0A0F0D;
-  --color-accent: #34D399;
-  --color-accent-light: #6EE7B7;
-  --color-accent-muted: #10B981;
-  --color-warm: #45524B;
-  --color-warm-light: #94A39B;
-  --color-muted: #A3B3AA;
-  --color-light: #CAD4CE;
-  --color-elevated: #1A2420;
-  --color-elevated-dark: #121A16;
-  --color-surface: #0B110E;
-  --color-surface-base: #070A09;
-  --color-surface-card: #0F1613;
-  --color-surface-float: #141D19;
-  --color-surface-border: #1C2923;
-  --color-surface-mid: #111A16;
-  --color-border: #C8D2CC;
-  --color-border-dark: #BEC8C2;
-  --color-border-subtle: #24332B;
-  --color-border-subtler: #1A2620;
-  --color-charcoal: #131B17;
-  --color-gray-soft: #90A097;
-  --color-gray-mid: #44544C;
-  --color-gray-btn: #46574F;
-  --color-footer-bg: #D7E0DA;
-  --color-footer-border: #C5CFC9;
+  --color-cream: #CDCFCC;
+  --color-ink: #2C2E2A;
+  --color-accent: #88A649;
+  --color-accent-secondary: #2E4022;
+  --color-accent-light: #88A649;
+  --color-accent-muted: #88A649;
+  --color-warm: #4C4A45;
+  --color-warm-light: #88A649;
+  --color-muted: #CDCFCC;
+  --color-light: #CDCFCC;
+  --color-elevated: #4C4A45;
+  --color-elevated-dark: #2C2E2A;
+  --color-surface: #2C2E2A;
+  --color-surface-base: #2C2E2A;
+  --color-surface-card: #4C4A45;
+  --color-surface-float: #4C4A45;
+  --color-surface-border: #88A649;
+  --color-surface-mid: #2C2E2A;
+  --color-border: #88A649;
+  --color-border-dark: #4C4A45;
+  --color-border-subtle: #4C4A45;
+  --color-border-subtler: #88A649;
+  --color-charcoal: #2C2E2A;
+  --color-gray-soft: #CDCFCC;
+  --color-gray-mid: #88A649;
+  --color-gray-btn: #4C4A45;
+  --color-footer-bg: #CDCFCC;
+  --color-footer-border: #88A649;
   --ease-in-expo: cubic-bezier(0.1, 0, 0.3, 1);
   --ease-custom: cubic-bezier(0.76, 0, 0.24, 1);
 }
@@ -91,15 +92,15 @@ body {
 }
 
 ::selection {
-  background: #34D399;
-  color: #0A0F0D;
+  background: #88A649;
+  color: #2C2E2A;
 }
 
 .bg-primary {
-  background-color: #6EE7B7;
+  background-color: #CDCFCC;
 }
 .bg-foreground {
-  background-color: #1C2923;
+  background-color: #88A649;
 }
 
 .film-grain {
@@ -139,20 +140,20 @@ body {
 
 .marquee-row-light::before {
   left: 0;
-  background: linear-gradient(to right, #E2E8E4, transparent);
+  background: linear-gradient(to right, #CDCFCC, transparent);
 }
 .marquee-row-light::after {
   right: 0;
-  background: linear-gradient(to left, #E2E8E4, transparent);
+  background: linear-gradient(to left, #CDCFCC, transparent);
 }
 
 .marquee-row-dark::before {
   left: 0;
-  background: linear-gradient(to right, #0A0F0D, transparent);
+  background: linear-gradient(to right, #2C2E2A, transparent);
 }
 .marquee-row-dark::after {
   right: 0;
-  background: linear-gradient(to left, #0A0F0D, transparent);
+  background: linear-gradient(to left, #2C2E2A, transparent);
 }
 
 .marquee-content-left {
@@ -221,7 +222,7 @@ body.cursor-disabled * {
 }
 
 :focus-visible {
-  outline: 2px solid #34D399;
+  outline: 2px solid #88A649;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -232,8 +233,8 @@ body.cursor-disabled * {
   left: 1rem;
   z-index: 10002;
   padding: 0.75rem 1.25rem;
-  background: #0A0F0D;
-  color: #E2E8E4;
+  background: #2C2E2A;
+  color: #CDCFCC;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.75rem;
   letter-spacing: 0.12em;

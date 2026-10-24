@@ -28,6 +28,13 @@ const CREDENTIALS = [
     stat: 'Maintained an administrative platform and automated recurring tasks with scheduled cron jobs.',
     type: 'Experience',
   },
+  {
+    year: '2021 – 26',
+    title: 'BS Computer Engineer',
+    organization: 'Universidad Tecnológica de la Mixteca',
+    stat: '3.30 / 4.00 GPA',
+    type: 'Experience',
+  },
 ];
 
 const About = () => {
@@ -269,7 +276,7 @@ const About = () => {
                   ref={pathRef}
                   d="M32 0 C25 84 39 164 32 250 C25 334 39 416 32 500 C25 584 39 666 32 750 C25 834 39 916 32 1000"
                   fill="none"
-                  stroke="rgba(232, 228, 222, 0.28)"
+                  stroke="rgba(205, 207, 204, 0.28)"
                   strokeWidth="1.5"
                 />
               </svg>
