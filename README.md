@@ -1,6 +1,6 @@
 # Portfolio
 
-The personal portfolio of [**Eduardo Rojas**](https://github.com/hairon02). Built with **Next.js 16**, **React 19**, **GSAP 3**, and **Lenis**, featuring hardware-accelerated motion choreography, interactive HTML5 canvas simulations, seamless page transitions, and an emerald-accented dark editorial design.
+The personal portfolio of [**Eduardo Rojas**](https://github.com/hairondev). Built with **Next.js 16**, **React 19**, **GSAP 3**, and **Lenis**, featuring hardware-accelerated motion choreography, interactive HTML5 canvas simulations, seamless page transitions, and an emerald-accented dark editorial design.
 
 **Live Site:** [hairon.vercel.app](https://hairon.vercel.app)
 
@@ -59,7 +59,7 @@ All environment variables are **completely optional** for local development. Any
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hairon02/Portfolio.git
+   git clone https://github.com/hairondev/Portfolio.git
    cd Portfolio
    ```
 

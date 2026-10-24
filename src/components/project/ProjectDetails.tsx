@@ -39,6 +39,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
       );
 
       gsap.utils.toArray<HTMLElement>('.pd-figure-parallax').forEach((wrap) => {
+        if (project.slug === 'clearing') return;
         const inner = wrap.querySelector('.pd-figure-inner');
         if (!inner) return;
         gsap.fromTo(
@@ -147,19 +148,30 @@ export default function ProjectDetails({ project }: { project: Project }) {
 
         {project.images && project.images.length > 0 && (
           <div className="mb-10 sm:mb-14 md:mb-20">
-            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] rounded-xl sm:rounded-2xl overflow-hidden bg-surface-card border border-surface-border shadow-2xl">
-              <div className="pd-figure-parallax absolute inset-0 overflow-hidden">
-                <div className="pd-figure-inner absolute inset-x-0 -top-[8%] h-[116%]" style={{ willChange: 'transform' }}>
-                  <Image
-                    src={project.images[0]}
-                    alt={`${project.title} preview`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 1200px"
-                    priority
-                    className="object-cover object-top"
-                  />
+            <div className={`relative w-full ${project.slug === 'clearing' ? 'max-w-[360px] mx-auto aspect-[9/16] max-h-[80vh]' : 'aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9]'} rounded-xl sm:rounded-2xl overflow-hidden bg-surface-card border border-surface-border shadow-2xl`}>
+              {project.slug === 'clearing' ? (
+                <Image
+                  src={project.images[0]}
+                  alt={`${project.title} preview`}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 360px"
+                  priority
+                  className="object-contain"
+                />
+              ) : (
+                <div className="pd-figure-parallax absolute inset-0 overflow-hidden">
+                  <div className="pd-figure-inner absolute inset-x-0 -top-[8%] h-[116%]" style={{ willChange: 'transform' }}>
+                    <Image
+                      src={project.images[0]}
+                      alt={`${project.title} preview`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 1200px"
+                      priority
+                      className="object-cover object-top"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         )}
@@ -227,27 +239,33 @@ export default function ProjectDetails({ project }: { project: Project }) {
         </div>
 
         {project.images && project.images.length > 1 && (
-          <div className="flex flex-col gap-6 sm:gap-10 md:gap-16 mb-14 sm:mb-18 md:mb-28">
+          <div className={`mb-14 sm:mb-18 md:mb-28 ${project.slug === 'clearing' ? '' : 'flex flex-col gap-6 sm:gap-10 md:gap-16'}`}>
             <div className="mb-1">
               <p className="font-mono text-xs uppercase tracking-widest text-warm-light">Gallery</p>
             </div>
-            {project.images.slice(1).map((img, i) => {
+            <div className={project.slug === 'clearing' ? 'grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6' : 'flex flex-col gap-6 sm:gap-10 md:gap-16'}>
+              {project.images.slice(1).map((img, i) => {
               const actualIdx = i + 1;
               const wide = actualIdx % 3 === 0;
               return (
                 <figure
                   key={`${project.slug}-img-${actualIdx}`}
-                  className={`relative ${wide ? 'w-full' : 'w-full md:w-10/12'} ${
-                    actualIdx % 3 === 1 ? 'md:ml-auto' : ''
-                  }`}
+                  className={`relative ${project.slug === 'clearing' ? 'w-full' : `${wide ? 'w-full' : 'w-full md:w-10/12'} ${actualIdx % 3 === 1 ? 'md:ml-auto' : ''}`}`}
                 >
                   <div
-                    className={`overflow-hidden rounded-xl bg-surface-card border border-surface-border relative aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] ${
-                      wide ? 'max-h-[500px]' : 'max-h-[420px]'
-                    } w-full`}
+                    className={`overflow-hidden rounded-xl bg-surface-card border border-surface-border relative ${project.slug === 'clearing' ? 'aspect-[9/16]' : `aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] ${wide ? 'max-h-[500px]' : 'max-h-[420px]'}`} w-full`}
                   >
-                    <div className="pd-figure-parallax absolute inset-0 overflow-hidden">
-                      <div className="pd-figure-inner absolute inset-x-0 -top-[8%] h-[116%]" style={{ willChange: 'transform' }}>
+                    {project.slug === 'clearing' ? (
+                      <Image
+                        src={img}
+                        alt={`${project.title} screenshot ${actualIdx + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 90vw, 360px"
+                        className="object-contain"
+                      />
+                    ) : (
+                      <div className="pd-figure-parallax absolute inset-0 overflow-hidden">
+                        <div className="pd-figure-inner absolute inset-x-0 -top-[8%] h-[116%]" style={{ willChange: 'transform' }}>
                         <Image
                           src={img}
                           alt={`${project.title} screenshot ${actualIdx + 1}`}
@@ -255,8 +273,9 @@ export default function ProjectDetails({ project }: { project: Project }) {
                           sizes="(max-width: 768px) 100vw, 1100px"
                           className="object-cover object-top"
                         />
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   <figcaption className="mt-2.5 flex items-center justify-between font-mono text-[10px] sm:text-[11px] uppercase tracking-widest text-muted">
                     <span>{project.title}</span>
@@ -266,7 +285,8 @@ export default function ProjectDetails({ project }: { project: Project }) {
                   </figcaption>
                 </figure>
               );
-            })}
+              })}
+            </div>
           </div>
         )}
 
