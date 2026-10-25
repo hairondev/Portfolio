@@ -86,6 +86,14 @@ export default function CustomCursor() {
       gsap.to(cursorTextEl, { opacity: 0, duration: 0.2 });
     };
 
+    const resetCursor = () => {
+      currentHoveredEl = null;
+      setCursorText('');
+      gsap.to(cursorDot, { scale: 1, duration: 0.25, overwrite: 'auto' });
+      gsap.to(cursorOutline, { scale: 1, backgroundColor: 'transparent', duration: 0.3, overwrite: 'auto' });
+      gsap.to(cursorTextEl, { opacity: 0, duration: 0.2, overwrite: 'auto' });
+    };
+
     const cursorEnter = (target: HTMLElement) => {
       const type = target.getAttribute('data-cursor');
 
@@ -151,6 +159,7 @@ export default function CustomCursor() {
     };
 
     window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('customCursorReset', resetCursor);
     document.addEventListener('mouseleave', handleMouseLeavePage);
     window.addEventListener('scroll', scheduleCheckElementUnderCursor, { passive: true });
 
@@ -163,6 +172,7 @@ export default function CustomCursor() {
       gsap.ticker.remove(tick);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseover', handleMouseOver);
+      window.removeEventListener('customCursorReset', resetCursor);
       document.removeEventListener('mouseleave', handleMouseLeavePage);
       window.removeEventListener('scroll', scheduleCheckElementUnderCursor);
       if (lenis) {
@@ -177,7 +187,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorDotRef}
-        className="pointer-events-none fixed top-0 left-0 z-[10000]"
+        className="pointer-events-none fixed top-0 left-0 z-[11000]"
         style={{ mixBlendMode: 'difference' }}
       >
         <div className="w-2 h-2 bg-white rounded-full" />
@@ -185,12 +195,12 @@ export default function CustomCursor() {
 
       <div
         ref={cursorOutlineRef}
-        className="pointer-events-none fixed top-0 left-0 z-[10000] w-12 h-12 border-2 border-accent rounded-full"
+        className="pointer-events-none fixed top-0 left-0 z-[11000] w-12 h-12 border-2 border-accent rounded-full"
       />
 
       <div
         ref={cursorTextRef}
-        className="pointer-events-none fixed top-0 left-0 z-[10001] opacity-0"
+        className="pointer-events-none fixed top-0 left-0 z-[11001] opacity-0"
       >
         <span className="text-accent-light text-[11px] font-bold tracking-[0.15em]">
           {cursorText}

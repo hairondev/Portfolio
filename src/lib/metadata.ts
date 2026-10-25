@@ -32,7 +32,7 @@ export const siteMetadata: Metadata = {
     canonical: './',
   },
   icons: {
-    icon: '/logo.webp',
+    icon: { url: '/logo.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' }
   },
   openGraph: {
     title: 'Eduardo Rojas - Full-Stack Developer',

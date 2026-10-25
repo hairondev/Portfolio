@@ -9,6 +9,7 @@
 
 import HomeBanner from '@/components/sections/HomeBanner';
 import Projects from '@/components/sections/Projects';
+import Achievements from '@/components/sections/Achievements';
 import About from '@/components/sections/About';
 import MarqueeStrip from '@/components/sections/MarqueeStrip';
 import CurvedSectionDivider from '@/components/ui/CurvedSectionDivider';
@@ -29,6 +30,7 @@ export default function Home() {
         <section className="relative z-20 bg-cream">
           <Projects />
         </section>
+        <Achievements />
         <MarqueeStrip />
         <CurvedSectionDivider curveColor="#CDCFCC" bottomColor="#2C2E2A" />
         <div className="relative z-25 bg-ink overflow-hidden">

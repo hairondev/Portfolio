@@ -22,6 +22,9 @@ export const getSectionElement = (targetId: string): HTMLElement | null => {
   if (id === 'techstack' || id === 'stack') {
     return document.getElementById('tech-stack') || document.getElementById('TechStack');
   }
+  if(id === 'achievements' || id === 'certifications') {
+    return document.getElementById('achievements');
+  }
   return document.getElementById(targetId);
 };
 

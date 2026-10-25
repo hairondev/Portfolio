@@ -152,7 +152,7 @@ const projects: Project[] = [
     hoverImage: '/Projects/echoworld/menu.png',
     github: 'https://github.com/hairondev/EchoWorld',
     liveUrl: '',
-    digitalBadge: '/Projects/echoworld/digitalBadge.png',
+    digitalBadge: '/Certifications/digitalBadge.png',
   },
     {
     id: 5,
