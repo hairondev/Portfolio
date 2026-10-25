@@ -21,6 +21,7 @@ export interface Project {
   hoverImage: string;
   github: string;
   liveUrl: string;
+  digitalBadge?: string;
 }
 
 const projects: Project[] = [
@@ -151,6 +152,7 @@ const projects: Project[] = [
     hoverImage: '/Projects/echoworld/menu.png',
     github: 'https://github.com/hairondev/EchoWorld',
     liveUrl: '',
+    digitalBadge: '/Projects/echoworld/digitalBadge.png',
   },
     {
     id: 5,

@@ -1,10 +1,10 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Image from 'next/image';
 import { gsap, useGSAP } from '@/lib/gsap';
 import AnimatedHeading from '@/components/ui/AnimateHeading';
 import ScrollWordReveal from '@/components/ui/ScrollWordReveal';
+import TechCard from '@/components/ui/TechCard';
 
 export interface TechItem {
   name: string;
@@ -286,36 +286,13 @@ const TechStack = () => {
 
               <div className="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {stack.technologies.map((tech, i) => (
-                  <div
+                  <TechCard
                     key={tech.name}
+                    tech={tech}
                     className="tech-item flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 hover:bg-elevated-dark/60 border border-white/[0.04] hover:border-accent-secondary/40 bg-surface/50"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="w-10 h-10 flex items-center justify-center relative flex-shrink-0">
-                      {tech.icon ? (
-                        <Image
-                          src={tech.icon}
-                          alt={tech.name}
-                          width={40}
-                          height={40}
-                          className="w-full h-full object-contain"
-                        />
-                      ) : (
-                        <span aria-hidden="true" className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-elevated-dark font-mono text-[10px] font-bold text-accent-light">
-                          {tech.name
-                            .split(/\s+/)
-                            .slice(0, 2)
-                            .map((part) => part.charAt(0))
-                            .join('')
-                            .toUpperCase()}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-xs sm:text-sm font-mono font-bold text-cream break-words">
-                      {tech.name}
-                    </p>
-                  </div>
+                  />
                 ))}
               </div>
             </div>

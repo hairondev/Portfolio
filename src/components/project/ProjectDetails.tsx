@@ -6,6 +6,7 @@ import { Link } from 'next-transition-router';
 import AnimatedHeading from '@/components/ui/AnimateHeading';
 import ScrollWordReveal from '@/components/ui/ScrollWordReveal';
 import AnimatedButton from '@/components/ui/AnimatedButton';
+import TechCard from '@/components/ui/TechCard';
 import { gsap, SplitText, useGSAP } from '@/lib/gsap';
 import { EASE } from '@/lib/motion';
 import { FaArrowUp, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
@@ -13,9 +14,27 @@ import { Project } from '@/lib/projects';
 import { getAdjacentProjects } from '@/lib/projects';
 import { site } from '@/lib/site';
 
+import { STACK_SECTIONS } from '@/components/sections/TechStack';
+
+const STACK_TECH_BY_NAME = new Map(
+  STACK_SECTIONS.flatMap((section) => section.technologies.map((tech) => [tech.name, tech] as const))
+);
+
+const PROJECT_TECH_ICONS: Record<string, string> = {
+  Express: '/Services/express.png',
+  'Socket.IO': '/Services/socketio.svg',
+  'MongoDB Atlas': '/Services/mongodb.svg',
+  'Upstash Redis': '/Services/redis-icon.svg',
+  Gemma: '/Services/google-gemma-ai-icon.svg',
+  'Azure OpenAI': '/Services/azure-badge.svg',
+  'Azure AI Search': '/Services/azure-badge.svg',
+  Vite: '/Services/vitejs.svg',
+};
+
 export default function ProjectDetails({ project }: { project: Project }) {
   const rootRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const techGridRef = useRef<HTMLDivElement>(null);
   const { prev, next } = getAdjacentProjects(project.slug);
 
   useGSAP(
@@ -57,6 +76,27 @@ export default function ProjectDetails({ project }: { project: Project }) {
           }
         );
       });
+
+      const techCards = techGridRef.current?.querySelectorAll('.pd-tech-item');
+      if (techCards?.length) {
+        gsap.fromTo(
+          techCards,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+            duration: 0.6,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: techGridRef.current,
+              start: 'top 90%',
+              end: 'top 70%',
+              scrub: 0.5,
+            },
+          }
+        );
+      }
 
       return () => split.revert();
     },
@@ -290,19 +330,38 @@ export default function ProjectDetails({ project }: { project: Project }) {
           </div>
         )}
 
+        
         <div className="mb-12 sm:mb-16 md:mb-20">
           <p className="font-mono text-xs uppercase tracking-widest text-warm-light mb-3 sm:mb-5">Built with</p>
-          <div className="flex flex-wrap gap-2">
-            {project.tech?.map((t) => (
-              <span
-                key={t}
-                className="font-mono text-xs px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-surface-mid border border-white/[0.08] text-cream"
-              >
-                {t}
-              </span>
+          <div ref={techGridRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {project.tech?.map((tech) => (
+              <TechCard
+                key={tech}
+                tech={{
+                  name: tech,
+                  icon: PROJECT_TECH_ICONS[tech] ?? STACK_TECH_BY_NAME.get(tech)?.icon,
+                }}
+                className="pd-tech-item"
+              />
             ))}
           </div>
         </div>
+        
+        {project.digitalBadge && (
+          <div className="mb-12 sm:mb-16 md:mb-20">
+          <p className="font-mono text-xs uppercase tracking-widest text-warm-light mb-3 sm:mb-5">Digital Badge</p>
+          <div className="relative w-full max-w-3xl aspect-[16/9] overflow-hidden rounded-xl">
+            <Image
+              src={project.digitalBadge}
+              alt={`${project.title} digital badge`}
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-contain"
+            />
+          </div>
+        </div>
+        )}
+        
 
         {(project.liveUrl || project.github) && (
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] mb-12 sm:mb-16 md:mb-20">
