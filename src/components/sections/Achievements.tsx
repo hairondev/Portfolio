@@ -40,6 +40,7 @@ const achievements = [
     date: 'June 2026',
     sortDate: '2026-06-01',
     category: 'Course',
+    image: '/Certifications/DesarrolloConIA.png',
   },
   {
     title: 'Curso de FastAPI',
@@ -48,6 +49,7 @@ const achievements = [
     sortDate: '2025-03-01',
     category: 'Course',
     href: 'https://platzi.com/p/haironl072/curso/11190-fastapi/diploma/detalle/',
+    image: '/Certifications/FastAPIPlatzi.png',
   },
   {
     title: 'Cybersecurity Fundamentals',
@@ -83,6 +85,7 @@ const achievements = [
     date: 'October 2024',
     sortDate: '2024-10-01',
     category: 'Course',
+    image: '/Certifications/FastAPIUTM.png',
   },
 ]
 
