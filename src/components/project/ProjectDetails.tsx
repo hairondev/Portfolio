@@ -363,7 +363,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
         )}
         
 
-        {(project.liveUrl || project.github) && (
+        {/* {(project.liveUrl || project.github) && (
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] mb-12 sm:mb-16 md:mb-20">
             <div>
               <p className="font-display font-bold text-lg sm:text-2xl text-white mb-1">
@@ -418,7 +418,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
               )}
             </div>
           </div>
-        )}
+        )} */}
 
         <nav aria-label="Project navigation" className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.08] mb-12 sm:mb-16">
           {prev && (
